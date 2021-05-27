@@ -1,0 +1,13 @@
+export const GETSTARTED_TITLE = 'Learn From Instabyte And Get Skilled'
+export const GETSTARTED_BUTTON = 'Get Started'
+export const SIGNUP = 'Signup'
+export const LOGIN = 'Login'
+export const WELOCME = 'Welcome!'
+export const WELOCME_DESCRIPTION = 'Create a new account or log in to get started.'
+export const OR = 'OR'
+export const FACEBOOK = 'Facebook'
+export const GOOGLE = 'Google'
+export const HAVE_ACCOUNT = "Already have an account?"
+export const DONT_ACCOUNT = "Don’t have an account?"
+export const WELCOME_BACK = 'Welcome Back!'
+export const LOGIN_DESCRIPTION='Please Login to Continue Learning'
