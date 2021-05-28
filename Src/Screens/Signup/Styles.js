@@ -130,12 +130,12 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   facebookButton: {
-    width: widthScreen / 2.6,
+    width: widthScreen / 2.5,
     alignSelf: 'center',
     justifyContent: 'center',
-    height: 60,
+    height: 50,
     backgroundColor: Colors.facebook,
-    borderRadius: 12
+    borderRadius: 4
   },
   socialText: {
     fontSize: 18,
@@ -153,11 +153,11 @@ const styles = StyleSheet.create({
     width: widthScreen / 2.6,
     alignSelf: 'center',
     justifyContent: 'center',
-    height: 60,
+    height: 50,
     backgroundColor: Colors.White,
     borderWidth: 1,
     borderColor: Colors.borderColor,
-    borderRadius: 12
+    borderRadius: 4
   },
   socialImage: {
     width: 20,

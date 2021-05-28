@@ -78,7 +78,7 @@ const styles = StyleSheet.create({
   },
   buyContainer: {
     width: widthScreen / 1.2,
-    height: 60,
+    height: 45,
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: '#42BE65',

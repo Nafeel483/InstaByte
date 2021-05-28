@@ -16,7 +16,7 @@ const styles = StyleSheet.create({
   },
   buttonContainer: {
     width: widthScreen / 1.2,
-    height: 60,
+    height: 50,
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: Colors.appHeaderColor,
@@ -32,7 +32,7 @@ const styles = StyleSheet.create({
   },
   buttonContainerGradient: {
     width: widthScreen / 1.2,
-    height: 60,
+    height: 50,
     justifyContent: 'center',
     alignItems: 'center',
     marginTop: 20,
@@ -85,7 +85,7 @@ const styles = StyleSheet.create({
   },
   inputImageLock: {
     width: 22,
-    height: 25,
+    height: 22,
     marginRight: 20,
   },
   emailWrapper1: {

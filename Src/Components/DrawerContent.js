@@ -76,7 +76,7 @@ class DrawerContent extends Component {
               width: 25,
               height: 25,
             }} />
-            <Text style={[{ marginLeft: 15, fontSize: 17, color: Colors.ok, fontWeight: '500' }]}>{value.name}</Text>
+            <Text style={[{ marginLeft: 15, fontSize: 17, color: Colors.ok, fontWeight: '600' }]}>{value.name}</Text>
           </View>
         </TouchableOpacity>
       </View>
@@ -137,7 +137,7 @@ class DrawerContent extends Component {
 
           {
 
-            <View style={[styles.container, { paddingTop: 10 }]}>
+            <View style={[styles.container1, { paddingTop: 2 }]}>
               {this.titles.map(this._renderItem)}
             </View>
           }
@@ -163,6 +163,11 @@ class DrawerContent extends Component {
 const styles = StyleSheet.create({
   container: {
     marginTop: Platform.OS == 'ios' ? 20 : 40,
+    flex: 0.9,
+    backgroundColor: "white"
+  },
+  container1:{
+    marginTop: 5,
     flex: 0.9,
     backgroundColor: "white"
   },

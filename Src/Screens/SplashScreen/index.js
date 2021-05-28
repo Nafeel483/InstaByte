@@ -27,15 +27,9 @@ class SplashScreen extends Component {
   
     return (
       <>
-        <LinearGradient
-          colors={['#F9C802', '#775F53']}
-          style={Styles.backgroundWrapper}
-          start={{ x: 0, y: 0 }}
-          end={{ x: 1, y: 1 }}
-        >
+       <ImageBackground source={Images.splash} style={Styles.backgroundWrapper}>
 
-          <Image source={Images.Logo} style={Styles.mainLogo} />
-        </LinearGradient>
+       </ImageBackground>
 
       </>
     );

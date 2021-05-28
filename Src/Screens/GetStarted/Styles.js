@@ -21,7 +21,7 @@ const styles = StyleSheet.create({
   },
   headingText: {
     fontSize: 27,
-    fontWeight: '600',
+    fontWeight: '700',
     textAlign: 'center',
     width: widthScreen / 1.2,
     alignSelf: 'center'
@@ -34,7 +34,7 @@ const styles = StyleSheet.create({
     backgroundColor: Colors.appHeaderColor,
     marginTop: 20,
     alignSelf: 'center',
-    borderRadius: 12,
+    borderRadius: 4,
     marginBottom: 15
   },
   buttonText: {
@@ -49,7 +49,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     marginTop: 20,
     alignSelf: 'center',
-    borderRadius: 12,
+    borderRadius: 4,
     marginBottom: 15
 
   }

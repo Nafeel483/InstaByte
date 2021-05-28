@@ -72,46 +72,91 @@ class LearningCategories extends Component {
             style={Styles.segmentMainContainer}>
             <View
               style={Styles.segmentWrapper}>
-              <SegmentedControlTab
-                values={["Learning Resources", "My  Jobs"]}
-                selectedIndex={this.state.selectedIndex}
-                onTabPress={this.handleIndexChange}
-                borderWidth={0}
-                borderLeftWidth={0}
-                borderLeftColor={Colors.White}
-                borderRightColor={Colors.White}
-                activeTabStyle={{
-                  backgroundColor: 'transparent', borderBottomWidth: 4,
-                  borderWidth: 0,
-                  borderRightColor: Colors.White,
-                  borderRightWidth: 0,
-                  borderLeftColor: Colors.White,
-                  borderBottomColor: Colors.textColor, borderColor: Colors.White
-                }}
-                activeTabTextStyle={{
-                  color: Colors.appHeaderColor,
-                  fontSize: 18,
-                  fontWeight: "700",
-                  marginVertical: 5
-                }}
-                tabStyle={{
-                  backgroundColor: 'transparent',
-                  borderBottomColor: '#454647',
-                  borderBottomWidth: 1,
-                  borderRightColor: Colors.White,
-                  borderLeftColor: Colors.White,
-                  borderLeftWidth: 0,
-                  borderWidth: 0,
-                  borderColor: Colors.White,
+              {
+                selectedIndex == 1 ?
+                  <SegmentedControlTab
+                    values={["Learning Resources", "Job Updates"]}
+                    selectedIndex={this.state.selectedIndex}
+                    onTabPress={this.handleIndexChange}
+                    borderWidth={0}
+                    borderLeftWidth={0}
+                    borderLeftColor={Colors.White}
+                    borderRightColor={Colors.White}
+                    activeTabStyle={{
+                      backgroundColor: 'transparent', borderBottomWidth: 4,
+                      borderWidth: 0,
+                      borderRightColor: Colors.White,
+                      borderRightWidth: 0,
+                      borderLeftColor: Colors.White,
+                      borderBottomColor: Colors.textColor, borderColor: Colors.White
+                    }}
+                    activeTabTextStyle={{
+                      color: Colors.appHeaderColor,
+                      fontSize: 17,
+                      fontWeight: "600",
+                      marginVertical: 5
+                    }}
+                    tabStyle={{
+                      backgroundColor: 'transparent',
+                      borderBottomColor: '#454647',
+                      borderBottomWidth: 1,
+                      borderRightColor: Colors.White,
+                      borderLeftColor: Colors.White,
+                      borderLeftWidth: 0,
+                      borderWidth: 0,
+                      borderColor: Colors.White,
 
-                }}
-                tabTextStyle={{
-                  color: Colors.ok,
-                  fontSize: 18,
-                  fontWeight: "700",
-                  marginVertical: 5,
-                }}
-              />
+                    }}
+                    tabTextStyle={{
+                      color: Colors.ok,
+                      fontSize: 17,
+                      fontWeight: "600",
+                      marginVertical: 5,
+                    }}
+                  />
+                  :
+
+                  <SegmentedControlTab
+                    values={["Learning Resources", "My  Jobs"]}
+                    selectedIndex={this.state.selectedIndex}
+                    onTabPress={this.handleIndexChange}
+                    borderWidth={0}
+                    borderLeftWidth={0}
+                    borderLeftColor={Colors.White}
+                    borderRightColor={Colors.White}
+                    activeTabStyle={{
+                      backgroundColor: 'transparent', borderBottomWidth: 4,
+                      borderWidth: 0,
+                      borderRightColor: Colors.White,
+                      borderRightWidth: 0,
+                      borderLeftColor: Colors.White,
+                      borderBottomColor: Colors.textColor, borderColor: Colors.White
+                    }}
+                    activeTabTextStyle={{
+                      color: Colors.appHeaderColor,
+                      fontSize: 18,
+                      fontWeight: "600",
+                      marginVertical: 5
+                    }}
+                    tabStyle={{
+                      backgroundColor: 'transparent',
+                      borderBottomColor: '#454647',
+                      borderBottomWidth: 1,
+                      borderRightColor: Colors.White,
+                      borderLeftColor: Colors.White,
+                      borderLeftWidth: 0,
+                      borderWidth: 0,
+                      borderColor: Colors.White,
+
+                    }}
+                    tabTextStyle={{
+                      color: Colors.ok,
+                      fontSize: 18,
+                      fontWeight: "600",
+                      marginVertical: 5,
+                    }}
+                  />
+              }
             </View>
           </View>
 

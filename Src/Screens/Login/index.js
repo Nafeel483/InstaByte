@@ -63,14 +63,14 @@ class Login extends Component {
                   <Text style={Styles.textInputHeading}>{'Email Id'}</Text>
                 }
                 <View style={Styles.emailWrapper}>
-                  <Image source={Images.mail} style={Styles.inputImageLock} />
+                  {/* <Image source={Images.mail} style={Styles.inputImageLock} /> */}
                   <TextInput
                     style={Styles.emailInput}
                     value={email}
                     placeholder={'Email'}
                     onFocus={this.focusEmail}
                     onBlur={this.focusEmail}
-                    placeholderTextColor={Colors.appHeaderColor}
+                    placeholderTextColor={Colors.textInputColor}
                     autoCapitalize='none'
                     onChangeText={(value) => {
                       this.setState({ email: value })
@@ -82,7 +82,7 @@ class Login extends Component {
                   <Text style={Styles.textInputHeading}>{'Password'}</Text>
                 }
                 <View style={Styles.emailWrapper}>
-                  <Image source={Images.lock} style={Styles.inputImageLock} />
+                  {/* <Image source={Images.lock} style={Styles.inputImageLock} /> */}
                   <TextInput
                     style={Styles.emailInput}
                     value={password}
@@ -90,7 +90,7 @@ class Login extends Component {
                     secureTextEntry={true}
                     onFocus={this.focusPhone}
                     onBlur={this.focusPhone}
-                    placeholderTextColor={Colors.appHeaderColor}
+                    placeholderTextColor={Colors.textInputColor}
                     autoCapitalize='none'
                     onChangeText={(value) => {
                       this.setState({ password: value })

@@ -147,7 +147,7 @@ const styles = StyleSheet.create({
     width: widthScreen / 2.6,
     alignSelf: 'center',
     justifyContent: 'center',
-    height: 60,
+    height: 50,
     backgroundColor: Colors.facebook,
     borderRadius: 12
   },
@@ -167,7 +167,7 @@ const styles = StyleSheet.create({
     width: widthScreen / 2.6,
     alignSelf: 'center',
     justifyContent: 'center',
-    height: 60,
+    height: 50,
     backgroundColor: Colors.White,
     borderWidth: 1,
     borderColor: Colors.borderColor,

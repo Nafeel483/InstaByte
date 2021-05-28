@@ -36,15 +36,26 @@ class Signup extends Component {
     this.setTime()
   }
   focusName = () => {
-    this.setState({ nameFocus: !this.state.nameFocus })
+    this.setState({
+      nameFocus: !this.state.nameFocus,
+      phoneFocus: false,
+    })
   }
   focusEmail = () => {
-    this.setState({ emailFocus: !this.state.emailFocus })
+    this.setState({
+      emailFocus: !this.state.emailFocus,
+      phoneFocus: false,
+    })
   }
   focusPhone = () => {
     this.setState({
       phoneFocus: false,
       passwordfocus: !this.state.passwordfocus
+    })
+  }
+  focusPhone1 = () => {
+    this.setState({
+      phoneFocus: !this.state.phoneFocus,
     })
   }
   setTime = () => {
@@ -128,12 +139,15 @@ class Signup extends Component {
                   onChangeText={(text) => {
                     this.setState({
                       value: text,
-                      phoneFocus: true
+                      // phoneFocus: true
                     });
                   }}
 
                   onChangeFormattedText={(text) => {
                     this.setState({ formattedValue: text });
+                  }}
+                  textInputProps={{
+                    onFocus: this.focusPhone1
                   }}
                   textContainerStyle={{ backgroundColor: 'transparent', }}
                   textInputStyle={{ width: '60%', backgroundColor: 'transparent', borderColor: "transparent" }}
@@ -167,7 +181,7 @@ class Signup extends Component {
               {
                 showgradient ?
                   <TouchableOpacity
-                    // onPress={() => { this.props.navigation.navigate("Login") }}
+                  // onPress={() => { this.props.navigation.navigate("Login") }}
                   >
                     <LinearGradient
                       colors={['#775F53', '#F9C802']}

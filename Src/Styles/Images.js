@@ -25,7 +25,7 @@ const images = {
   back: require('../../assets/Icons/back.png'),
   heart: require('../../assets/Icons/heart.png'),
   share: require('../../assets/Icons/share.png'),
-
+  splash: require('../../assets/Icons/splash.png'),
   // Payment Icons
   upi: require('../../assets/Icons/paymentIcons/upi.png'),
   papal: require('../../assets/Icons/paymentIcons/papal.png'),
