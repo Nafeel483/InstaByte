@@ -14,11 +14,11 @@ import Colors from '../../Styles/Colors';
 import Modal from 'react-native-modal';
 
 import * as Constants from '../../AllConstants';
-import Header from '../../Components/Header';
+import BackHeader from '../../Components/BackHeader';
 import { LinearGradient } from 'expo-linear-gradient';
 
 
-class BuyCourse extends Component {
+class Subscription extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -39,7 +39,7 @@ class BuyCourse extends Component {
   valueChange = () => {
     this.setState({ isModalVisible: !this.state.isModalVisible })
   }
-  valueChange1=()=>{
+  valueChange1 = () => {
     this.setState({ isModalVisible: !this.state.isModalVisible })
     this.props.navigation.navigate("SelectPayment")
   }
@@ -48,36 +48,28 @@ class BuyCourse extends Component {
     return (
       <>
         <View style={Styles.safeViewStyle}>
-          <Header
+          <BackHeader
             navigation={this.props.navigation}
-            headerName={'Categories'}
+            headerName={'Subscription'}
+            screen={'LearningCategories'}
+            nextShow={false}
           />
           <View style={Styles.mainWrapper}>
 
             <View style={Styles.courseDescription}>
               <Text style={Styles.headingText}>
-                {'Category Name'}
+                {'Bytes Subscription'}
               </Text>
               <Text style={Styles.headingdescription}>
-                {'Buy Course at'}
+                {'Upgrade to Premium Membership and increase your options'}
               </Text>
-              <Text style={Styles.headingPrice}>
-                {'$9.9'}
-              </Text>
+
               <TouchableOpacity style={Styles.buyContainer}
                 onPress={this.valueChange}
               >
-                <Text style={Styles.buttonText}>{'Buy Now'}</Text>
+                <Text style={Styles.buttonText}>{'$99 Upgrade to Premium'}</Text>
               </TouchableOpacity>
-              <Text style={Styles.buyPrice}>
-                {'Purchase Valid till 6 months'}
-              </Text>
 
-              <TouchableOpacity style={Styles.cancelButton}
-                onPress={() => { this.props.navigation.navigate("LearningCategories") }}
-              >
-                <Text style={Styles.buttonText1}>{'Cancel'}</Text>
-              </TouchableOpacity>
             </View>
           </View>
           <View style={Styles.bottomWrapper}>
@@ -111,12 +103,13 @@ class BuyCourse extends Component {
                   <View style={Styles.modelContainer}>
                     <View style={{ marginTop: 30, marginBottom: 30 }}>
                       <Text style={Styles.headingText}>
-                        {'Category Name'}
+                        {'Subscription'}
                       </Text>
                       <Text style={Styles.headingdescription1}>
-                        {'Please Purchase to access this content'}
+                        {'Please make a subscription to access this content'}
                       </Text>
-                      <View style={{ flexDirection: 'row', alignSelf: "center", marginTop: 20 }}>
+                      <View style={{ flexDirection: 'row', 
+                      marginTop: 20, justifyContent: 'flex-end' }}>
 
                         <TouchableOpacity style={Styles.cancelButton1}
                           onPress={this.valueChange}
@@ -124,7 +117,7 @@ class BuyCourse extends Component {
                           <Text style={Styles.buttonText1}>{'Cancel'}</Text>
                         </TouchableOpacity>
                         <TouchableOpacity style={Styles.cancelButton1}
-                         onPress={this.valueChange1}
+                          onPress={this.valueChange1}
                         >
                           <Text style={Styles.buttonText1}>{'Subscribe'}</Text>
                         </TouchableOpacity>
@@ -145,4 +138,4 @@ class BuyCourse extends Component {
     );
   }
 }
-export default BuyCourse;
+export default Subscription;

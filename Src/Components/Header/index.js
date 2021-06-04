@@ -67,7 +67,7 @@ class Header extends Component {
                       }]} />
                     </TouchableOpacity>
                   </View>
-                  <TouchableOpacity>
+                  <TouchableOpacity onPress={() => { this.props.navigation.navigate('Notifications') }}>
                     <Image source={Images.notification} style={[Styles.menuStyle, { marginLeft: 15 }]} />
                   </TouchableOpacity>
                   {/* End */}
@@ -91,7 +91,7 @@ class Header extends Component {
                   <TouchableOpacity onPress={this.searchValue}>
                     <Image source={Images.search} style={Styles.menuStyle} />
                   </TouchableOpacity>
-                  <TouchableOpacity>
+                  <TouchableOpacity onPress={() => { this.props.navigation.navigate('Notifications') }}>
                     <Image source={Images.notification} style={[Styles.menuStyle, { marginLeft: 15 }]} />
                   </TouchableOpacity>
                 </View>

@@ -35,7 +35,7 @@ class PaymentForm extends Component {
   }
   setTime = () => {
     setTimeout(() => {
-      this.props.navigation.navigate('LearningCategories')
+      this.props.navigation.navigate('Gratitude')
     }, 500);
   }
   render() {
@@ -139,9 +139,7 @@ class PaymentForm extends Component {
 
               {
                 showgradient ?
-                  <TouchableOpacity
-                  // onPress={() => { this.props.navigation.navigate("LearningCategories") }}
-                  >
+                  <TouchableOpacity>
                     <LinearGradient
                       colors={['#775F53', '#F9C802']}
                       style={Styles.buttonContainerGradient}

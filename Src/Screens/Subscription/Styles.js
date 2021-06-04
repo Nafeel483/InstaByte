@@ -92,7 +92,8 @@ const styles = StyleSheet.create({
     backgroundColor: '#42BE65',
     marginTop: 20,
     alignSelf: 'center',
-    borderRadius: 25
+    borderRadius: 25,
+    marginBottom:40
   },
   cancelButton: {
     width: '40%',
@@ -108,16 +109,16 @@ const styles = StyleSheet.create({
     marginBottom: 20,
     marginRight: 15
   },
-  cancelButton1:{
-    width: '40%',
-    height: 60,
+  cancelButton1: {
+    width: '34%',
+    height: 50,
     borderColor: Colors.appHeaderColor,
     borderWidth: 1,
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: Colors.White,
     marginTop: 20,
-    alignSelf: 'center',
+    alignSelf: 'flex-end',
     borderRadius: 25,
     marginBottom: 20,
     marginRight: 15

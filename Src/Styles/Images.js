@@ -34,5 +34,20 @@ const images = {
   credit_card: require('../../assets/Icons/paymentIcons/credit_card.png'),
   master: require('../../assets/Icons/paymentIcons/master.png'),
   information: require('../../assets/Icons/paymentIcons/information.png'),
+
+  // setting Icons
+  settingPayments: require('../../assets/Icons/Settings/settingPayments.png'),
+  settingSheild: require('../../assets/Icons/Settings/settingSheild.png'),
+  settingTerm: require('../../assets/Icons/Settings/settingTerm.png'),
+  settingUser: require('../../assets/Icons/Settings/settingUser.png'),
+  editIcon: require('../../assets/Icons/Settings/editIcon.png'),
+  dropDown: require('../../assets/Icons/Settings/dropDown.png'),
+  mainViewNotification: require('../../assets/Icons/Settings/mainViewNotification.png'),
+  favouriteMAin: require('../../assets/Icons/Settings/favouriteMAin.png'),
+  closeIcon: require('../../assets/Icons/Settings/close.png'),
+
+  messageEdit: require('../../assets/Icons/Settings/messageEdit.png'),
+  phone_call: require('../../assets/Icons/Settings/phone_call.png'),
+
 };
 export default images;

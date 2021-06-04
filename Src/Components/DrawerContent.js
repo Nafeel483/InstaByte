@@ -34,6 +34,10 @@ class DrawerContent extends Component {
           image: Images.drawerNotification
         },
         {
+          name: "Change Password",
+          image: Images.lock
+        },
+        {
           name: "Help",
           image: Images.help
         },
@@ -45,10 +49,11 @@ class DrawerContent extends Component {
       ];
     this.navigates =
       [
-        "LearningCategories",
-        "",
-        "",
-        "",
+        "Favourites",
+        "Subscription",
+        "Notifications",
+        "ChangePassword",
+        "ContactUs",
         "",
 
 
@@ -67,7 +72,7 @@ class DrawerContent extends Component {
         {/* {index !== 0 && this._renderSeparator()} */}
         <TouchableOpacity
           onPress={() => {
-            // this._onPress(value, index);
+            this._onPress(value, index);
           }}
           style={styles.menu}
         >
@@ -115,7 +120,8 @@ class DrawerContent extends Component {
                   }}>
                     {'User Name'}
                   </Text>
-                  <TouchableOpacity>
+                  <TouchableOpacity
+                    onPress={() => { this.props.navigation.navigate('ViewProfile') }}>
                     <Text style={{
                       fontSize: 17, fontWeight: "500", color: Colors.appHeaderColor,
                       textAlign: 'center',
@@ -126,10 +132,13 @@ class DrawerContent extends Component {
                   </TouchableOpacity>
                 </View>
               </View>
-              <Image source={Images.setting} style={{
-                width: 30,
-                height: 30,
-              }} />
+              <TouchableOpacity onPress={() => { this.props.navigation.navigate('Settings') }}>
+
+                <Image source={Images.setting} style={{
+                  width: 30,
+                  height: 30,
+                }} />
+              </TouchableOpacity>
             </View>
             {/* 2nd */}
 
@@ -166,7 +175,7 @@ const styles = StyleSheet.create({
     flex: 0.9,
     backgroundColor: "white"
   },
-  container1:{
+  container1: {
     marginTop: 5,
     flex: 0.9,
     backgroundColor: "white"
