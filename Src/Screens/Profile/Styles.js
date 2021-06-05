@@ -26,17 +26,17 @@ const styles = StyleSheet.create({
   },
   buttonContainerGradient: {
     width: 150,
-    height: 60,
+    height: 45,
     justifyContent: 'center',
     alignItems: 'center',
-    marginTop: 30,
+    marginTop: 20,
     alignSelf: 'center',
     borderRadius: 25,
     marginBottom: 10
   },
   buttonContainer: {
     width: 150,
-    height: 60,
+    height: 45,
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: Colors.appHeaderColor,
@@ -51,20 +51,21 @@ const styles = StyleSheet.create({
     fontWeight: '600'
   },
   headerWrapper: {
+    marginTop: 30,
     flexDirection: 'row',
     justifyContent: 'space-between'
 
   },
   headerTitle: {
     fontSize: 20,
-    fontWeight: '600',
+    fontWeight: '700',
     color: Colors.appHeaderColor,
   },
   editIcon: {
-    width: 30,
-    height: 30,
-    marginTop: '30%',
-    marginLeft: -25
+    width: 25,
+    height: 25,
+    marginTop: '38%',
+    marginLeft: -33
   },
   headerContainer: {
     width: widthScreen / 1.2,
@@ -79,7 +80,7 @@ const styles = StyleSheet.create({
     borderColor: Colors.appHeaderColor,
     borderRadius: 12,
     backgroundColor: Colors.White,
-    height: 60,
+    height: 50,
     justifyContent: 'center',
     alignItems: 'center',
     alignSelf: 'center',

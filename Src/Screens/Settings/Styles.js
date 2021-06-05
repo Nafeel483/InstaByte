@@ -14,10 +14,23 @@ const styles = StyleSheet.create({
   },
   textInputHeading: {
     marginTop: 15,
-    fontSize: 18,
+    fontSize: 16,
     marginLeft: 10,
     fontWeight: '500',
     color: Colors.textColor
+  },
+  emailWrapper1:{
+    marginTop: 10,
+    flexDirection: 'row',
+    borderWidth: 1,
+    borderColor: Colors.appHeaderColor,
+    borderRadius: 25,
+    backgroundColor: Colors.White,
+    height: 60,
+    justifyContent: 'center',
+    alignItems: 'center',
+    alignSelf: 'center',
+    width: widthScreen / 1.2,
   },
   emailWrapper: {
     marginTop: 35,

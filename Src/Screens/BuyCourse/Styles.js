@@ -96,7 +96,7 @@ const styles = StyleSheet.create({
   },
   cancelButton: {
     width: '40%',
-    height: 60,
+    height: 40,
     borderColor: Colors.appHeaderColor,
     borderWidth: 1,
     justifyContent: 'center',
@@ -110,7 +110,7 @@ const styles = StyleSheet.create({
   },
   cancelButton1:{
     width: '40%',
-    height: 60,
+    height: 50,
     borderColor: Colors.appHeaderColor,
     borderWidth: 1,
     justifyContent: 'center',

@@ -59,9 +59,9 @@ class Profile extends Component {
 
             <View style={{ flexDirection: 'row', justifyContent: 'center' }}>
               <Image source={Images.Avatar} style={{
-                width: 110,
-                height: 110,
-                borderRadius: 110,
+                width: 130,
+                height: 130,
+                borderRadius: 130,
                 alignSelf: 'center',
                 marginTop: 20
               }} />
@@ -95,7 +95,7 @@ class Profile extends Component {
                 <TextInput
                   style={Styles.emailInput}
                   value={email}
-                  placeholder={'Name'}
+                  placeholder={'Email'}
                   // onFocus={this.focusName}
                   // onBlur={this.focusName}
                   placeholderTextColor={Colors.textInputColor}

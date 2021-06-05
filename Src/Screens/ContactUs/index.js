@@ -31,7 +31,7 @@ class ContactUs extends Component {
       privacy: '',
       subscriptionFocus: false,
       subscription: '',
-      showgradient:false
+      showgradient: false
     };
   }
   getStartedPress = () => {
@@ -69,7 +69,7 @@ class ContactUs extends Component {
     })
   }
   render() {
-    const { profile, profileFocus, password, passwordFocus,showgradient,
+    const { profile, profileFocus, password, passwordFocus, showgradient,
       setting, settingFocus, privacy, privacyFocus, subscriptionFocus, subscription
     } = this.state
     return (
@@ -88,7 +88,7 @@ class ContactUs extends Component {
                 profileFocus &&
                 <Text style={Styles.textInputHeading}>{'Name'}</Text>
               }
-              <View style={Styles.emailWrapper}>
+              <View style={profileFocus ? Styles.emailWrapper2 : Styles.emailWrapper}>
                 <Image source={Images.settingUser} style={Styles.inputImageLock} />
                 <TextInput
                   style={Styles.emailInput}
@@ -110,7 +110,7 @@ class ContactUs extends Component {
                 passwordFocus &&
                 <Text style={Styles.textInputHeading}>{'Email'}</Text>
               }
-              <View style={Styles.emailWrapper}>
+              <View style={passwordFocus ? Styles.emailWrapper2 : Styles.emailWrapper}>
                 <Image source={Images.mail} style={Styles.inputImageLock} />
                 <TextInput
                   style={Styles.emailInput}
@@ -132,7 +132,7 @@ class ContactUs extends Component {
                 subscriptionFocus &&
                 <Text style={Styles.textInputHeading}>{'Phone'}</Text>
               }
-              <View style={Styles.emailWrapper}>
+              <View style={subscriptionFocus ? Styles.emailWrapper2 : Styles.emailWrapper}>
                 <Image source={Images.phone_call} style={Styles.inputImageLock} />
                 <TextInput
                   style={Styles.emailInput}
@@ -153,11 +153,12 @@ class ContactUs extends Component {
                 privacyFocus &&
                 <Text style={Styles.textInputHeading}>{'Message'}</Text>
               }
-              <View style={Styles.emailWrapper1}>
+              <View style={privacyFocus ? Styles.emailWrapper4 : Styles.emailWrapper1}>
                 <Image source={Images.messageEdit} style={Styles.inputImageLock1} />
                 <TextInput
                   style={Styles.emailInput1}
                   value={privacy}
+                  numberOfLines={4}
                   multiline={true}
                   placeholder={'Message'}
                   onFocus={this.focusPrivacy}

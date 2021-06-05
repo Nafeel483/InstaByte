@@ -87,7 +87,7 @@ class Settings extends Component {
                 profileFocus &&
                 <Text style={Styles.textInputHeading}>{'Profile'}</Text>
               }
-              <View style={Styles.emailWrapper}>
+              <View style={profileFocus ? Styles.emailWrapper1 : Styles.emailWrapper}>
                 <Image source={Images.settingUser} style={Styles.inputImageLock} />
                 <TextInput
                   style={Styles.emailInput}
@@ -109,7 +109,7 @@ class Settings extends Component {
                 passwordFocus &&
                 <Text style={Styles.textInputHeading}>{'Change Password'}</Text>
               }
-              <View style={Styles.emailWrapper}>
+              <View style={passwordFocus ? Styles.emailWrapper1 : Styles.emailWrapper}>
                 <Image source={Images.lock} style={Styles.inputImageLock} />
                 <TextInput
                   style={Styles.emailInput}
@@ -132,7 +132,7 @@ class Settings extends Component {
                 subscriptionFocus &&
                 <Text style={Styles.textInputHeading}>{'Subscription'}</Text>
               }
-              <View style={Styles.emailWrapper}>
+              <View style={subscriptionFocus ? Styles.emailWrapper1 : Styles.emailWrapper}>
                 <Image source={Images.settingPayments} style={Styles.inputImageLock} />
                 <TextInput
                   style={Styles.emailInput}
@@ -153,7 +153,7 @@ class Settings extends Component {
                 privacyFocus &&
                 <Text style={Styles.textInputHeading}>{'Privacy Policy'}</Text>
               }
-              <View style={Styles.emailWrapper}>
+              <View style={privacyFocus ? Styles.emailWrapper1 : Styles.emailWrapper}>
                 <Image source={Images.settingSheild} style={Styles.inputImageLock} />
                 <TextInput
                   style={Styles.emailInput}
@@ -175,7 +175,7 @@ class Settings extends Component {
                 settingFocus &&
                 <Text style={Styles.textInputHeading}>{'Terms and Conditions'}</Text>
               }
-              <View style={Styles.emailWrapper}>
+              <View style={settingFocus ? Styles.emailWrapper1 : Styles.emailWrapper}>
                 <Image source={Images.settingTerm} style={Styles.inputImageLock} />
                 <TextInput
                   style={Styles.emailInput}

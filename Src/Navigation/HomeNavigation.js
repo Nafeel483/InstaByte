@@ -14,9 +14,11 @@ import Favourites from '../Screens/Favourites';
 import Subscription from '../Screens/Subscription';
 import ContactUs from '../Screens/ContactUs';
 import ChangePassword from '../Screens/ChangePassword';
+import HomeScreen from '../Screens/HomeScreen';
 
 const HomeNavigation = createStackNavigator(
   {
+    HomeScreen: { screen: HomeScreen },
     LearningCategories: { screen: LearningCategories },
     CategoryList: { screen: CategoryList },
     VideoScreen: { screen: VideoScreen },

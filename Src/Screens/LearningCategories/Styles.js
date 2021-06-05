@@ -40,7 +40,7 @@ const styles = StyleSheet.create({
   },
   headerContentWrapper: {
     marginTop: 15,
-    marginBottom: '20%'
+    marginBottom: 5
   },
   headerContent: {
     flexDirection: 'row',
@@ -49,7 +49,7 @@ const styles = StyleSheet.create({
   },
   headerContentInner: {
     width: 110,
-    height: 100,
+    height: 150,
     borderRadius: 12,
     justifyContent: 'flex-end',
     alignItems: 'center',

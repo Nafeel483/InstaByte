@@ -26,22 +26,22 @@ const styles = StyleSheet.create({
   },
   buttonContainerGradient: {
     width: widthScreen / 1.2,
-    height: 60,
+    height: 55,
     justifyContent: 'center',
     alignItems: 'center',
     alignSelf: 'center',
     borderRadius: 25,
-    marginBottom: 30
+    marginBottom: 20
   },
   buttonContainer: {
     width: widthScreen / 1.2,
-    height: 60,
+    height: 55,
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: Colors.appHeaderColor,
     alignSelf: 'center',
     borderRadius: 25,
-    marginBottom: 30
+    marginBottom: 20
   },
   buttonText: {
     color: Colors.White,

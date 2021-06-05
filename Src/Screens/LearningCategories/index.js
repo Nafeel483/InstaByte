@@ -6,7 +6,9 @@ import {
   TouchableOpacity,
   ScrollView,
   Image,
-  ImageBackground
+  ImageBackground,
+  FlatList
+
 } from 'react-native';
 import Styles from './Styles';
 import Images from '../../Styles/Images';
@@ -58,6 +60,22 @@ class LearningCategories extends Component {
   handleIndexChange = (index) => {
     this.setState({ selectedIndex: index })
   };
+
+  showProfileWrapper = (value) => {
+    return (
+      <>
+        <ImageBackground
+          source={value.image}
+          imageStyle={{ borderRadius: 15 }}
+          style={Styles.headerContentInner}>
+          <TouchableOpacity>
+            <Image source={Images.playIcon} style={Styles.playIconStyle} />
+          </TouchableOpacity>
+          <Text style={[Styles.textCategory1, { marginTop: 30, marginBottom: 10 }]}>{value.name}</Text>
+        </ImageBackground>
+      </>
+    )
+  }
   render() {
     const { premiumData, freeData, selectedIndex } = this.state
     return (
@@ -185,8 +203,17 @@ class LearningCategories extends Component {
               </TouchableOpacity>
             </View>
           }
-
-          <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
+          <View style={Styles.headerContentWrapper}>
+            <View style={Styles.headerContent}>
+              <FlatList
+                showsHorizontalScrollIndicator={false}
+                horizontal={true}
+                data={freeData}
+                renderItem={({ item }) => this.showProfileWrapper(item)}
+              />
+            </View>
+          </View>
+          {/* <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
             <View style={Styles.headerContentWrapper}>
               <View style={Styles.headerContent}>
                 {
@@ -208,7 +235,7 @@ class LearningCategories extends Component {
                 }
               </View>
             </View>
-          </ScrollView>
+          </ScrollView> */}
           {
             selectedIndex == 0 ?
               <View style={Styles.headerWrapper}>

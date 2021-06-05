@@ -51,13 +51,14 @@ const styles = StyleSheet.create({
     fontWeight: '600'
   },
   headerWrapper: {
+    marginTop: 30,
     flexDirection: 'row',
     justifyContent: 'space-between'
 
   },
   headerTitle: {
     fontSize: 20,
-    fontWeight: '600',
+    fontWeight: '700',
     color: Colors.appHeaderColor,
   },
   listText: {

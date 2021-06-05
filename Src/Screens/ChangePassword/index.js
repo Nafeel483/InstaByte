@@ -84,7 +84,7 @@ class ChangePassword extends Component {
           <ScrollView>
             <View style={Styles.headerContainer}>
 
-            <Text style={Styles.headingText}>
+              <Text style={Styles.headingText}>
                 {'Create New Password'}
               </Text>
               {/* Profile */}
@@ -92,7 +92,7 @@ class ChangePassword extends Component {
                 profileFocus &&
                 <Text style={Styles.textInputHeading}>{'Current Password'}</Text>
               }
-              <View style={Styles.emailWrapper}>
+              <View style={profileFocus ? Styles.emailWrapper1 : Styles.emailWrapper}>
                 <Image source={Images.lock} style={Styles.inputImageLock} />
                 <TextInput
                   style={Styles.emailInput}
@@ -115,7 +115,7 @@ class ChangePassword extends Component {
                 passwordFocus &&
                 <Text style={Styles.textInputHeading}>{'New Password'}</Text>
               }
-              <View style={Styles.emailWrapper}>
+              <View style={passwordFocus ? Styles.emailWrapper1 : Styles.emailWrapper}>
                 <Image source={Images.lock} style={Styles.inputImageLock} />
                 <TextInput
                   style={Styles.emailInput}
@@ -138,7 +138,7 @@ class ChangePassword extends Component {
                 subscriptionFocus &&
                 <Text style={Styles.textInputHeading}>{'Confirm Password'}</Text>
               }
-              <View style={Styles.emailWrapper}>
+              <View style={subscriptionFocus ? Styles.emailWrapper1 : Styles.emailWrapper}>
                 <Image source={Images.lock} style={Styles.inputImageLock} />
                 <TextInput
                   style={Styles.emailInput}

@@ -39,7 +39,20 @@ const styles = StyleSheet.create({
     borderColor: Colors.appHeaderColor,
     borderRadius: 12,
     backgroundColor: Colors.White,
-    height: 90,
+    height: 150,
+    // justifyContent: 'center',
+    // alignItems: 'center',
+    alignSelf: 'center',
+    width: widthScreen / 1.2,
+  },
+  emailWrapper4: {
+    marginTop: 10,
+    flexDirection: 'row',
+    borderWidth: 1,
+    borderColor: Colors.appHeaderColor,
+    borderRadius: 12,
+    backgroundColor: Colors.White,
+    height: 150,
     // justifyContent: 'center',
     // alignItems: 'center',
     alignSelf: 'center',
@@ -54,11 +67,12 @@ const styles = StyleSheet.create({
   emailInput1: {
     marginLeft: 20,
     flex: 1,
+    marginTop: 10,
+    textAlignVertical: 'top',
     fontSize: 17,
-    margin: 10
   },
   inputImageLock: {
-    width: 22,
+    width: 25,
     height: 25,
     marginLeft: 20,
   },
@@ -93,6 +107,19 @@ const styles = StyleSheet.create({
     color: Colors.White,
     fontSize: 20,
     fontWeight: '600'
+  },
+  emailWrapper2:{
+    marginTop: 10,
+    flexDirection: 'row',
+    borderWidth: 1,
+    borderColor: Colors.appHeaderColor,
+    borderRadius: 12,
+    backgroundColor: Colors.White,
+    height: 60,
+    justifyContent: 'center',
+    alignItems: 'center',
+    alignSelf: 'center',
+    width: widthScreen / 1.2,
   },
 });
 export default styles;

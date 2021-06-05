@@ -65,11 +65,10 @@ const styles = StyleSheet.create({
   },
   headingdescription1: {
     marginTop: 20,
-    textAlign: 'center',
+    // textAlign: 'center',
     fontWeight: '400',
     fontSize: 18,
-    width: '80%',
-    alignSelf: 'center'
+    marginLeft: 15
   },
   headingPrice: {
     marginTop: 20,
@@ -93,7 +92,7 @@ const styles = StyleSheet.create({
     marginTop: 20,
     alignSelf: 'center',
     borderRadius: 25,
-    marginBottom:40
+    marginBottom: 40
   },
   cancelButton: {
     width: '40%',
@@ -111,7 +110,7 @@ const styles = StyleSheet.create({
   },
   cancelButton1: {
     width: '34%',
-    height: 50,
+    height: 40,
     borderColor: Colors.appHeaderColor,
     borderWidth: 1,
     justifyContent: 'center',
@@ -125,8 +124,8 @@ const styles = StyleSheet.create({
   },
   buttonText1: {
     color: Colors.ok,
-    fontSize: 20,
-    fontWeight: '600'
+    fontSize: 14,
+    fontWeight: '700'
   },
   modelContainer: {
     width: '100%',

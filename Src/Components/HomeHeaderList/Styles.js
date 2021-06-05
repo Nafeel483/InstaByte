@@ -4,8 +4,10 @@ const widthScreen = Dimensions.get('window').width;
 const styles = StyleSheet.create({
   headerWrapper: {
     width: widthScreen,
-    height: Platform.OS == 'ios' ? 110 : 90,
+    height: Platform.OS == 'ios' ? 170 : 150,
     alignItems: 'center',
+    borderBottomLeftRadius: 20,
+    borderBottomRightRadius: 20
   },
   mainWrapper: {
     flexDirection: 'row',
@@ -22,6 +24,7 @@ const styles = StyleSheet.create({
   },
   innerWrapper: {
     flexDirection: 'row',
+    marginTop:10
   },
   menuStyle: {
     marginTop: Platform.OS == 'ios' ? 0 : 5,
@@ -29,8 +32,15 @@ const styles = StyleSheet.create({
     height: 25
   },
   headerTitle: {
-    fontSize: 20,
-    fontWeight: '600',
+    fontSize: 30,
+    fontWeight: '700',
+    color: Colors.White,
+    marginLeft: 15,
+    marginTop: 3,
+  },
+  headerTitle1:{
+    fontSize: 30,
+    fontWeight: '700',
     color: Colors.White,
     marginLeft: 15,
     marginTop: 3,

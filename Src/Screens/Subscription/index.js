@@ -54,24 +54,58 @@ class Subscription extends Component {
             screen={'LearningCategories'}
             nextShow={false}
           />
-          <View style={Styles.mainWrapper}>
+          {
+            isModalVisible ?
+              <View style={Styles.mainWrapper}>
 
-            <View style={Styles.courseDescription}>
-              <Text style={Styles.headingText}>
-                {'Bytes Subscription'}
-              </Text>
-              <Text style={Styles.headingdescription}>
-                {'Upgrade to Premium Membership and increase your options'}
-              </Text>
+                <View style={Styles.courseDescription}>
+                  <Text style={Styles.headingText}>
+                    {'Subscription'}
+                  </Text>
+                  <Text style={Styles.headingdescription1}>
+                    {'Please make a subscription to access this content'}
+                  </Text>
 
-              <TouchableOpacity style={Styles.buyContainer}
-                onPress={this.valueChange}
-              >
-                <Text style={Styles.buttonText}>{'$99 Upgrade to Premium'}</Text>
-              </TouchableOpacity>
+                  <View style={{
+                    flexDirection: 'row',
+                    marginTop: 20, justifyContent: 'flex-end'
+                  }}>
 
-            </View>
-          </View>
+                    <TouchableOpacity style={Styles.cancelButton1}
+                      onPress={this.valueChange}
+                    >
+                      <Text style={Styles.buttonText1}>{'Cancel'}</Text>
+                    </TouchableOpacity>
+                    <TouchableOpacity style={Styles.cancelButton1}
+                      onPress={this.valueChange1}
+                    >
+                      <Text style={Styles.buttonText1}>{'Subscribe'}</Text>
+                    </TouchableOpacity>
+
+                  </View>
+                </View>
+              </View>
+              :
+
+              <View style={Styles.mainWrapper}>
+
+                <View style={Styles.courseDescription}>
+                  <Text style={Styles.headingText}>
+                    {'Bytes Subscription'}
+                  </Text>
+                  <Text style={Styles.headingdescription}>
+                    {'Upgrade to Premium Membership and increase your options'}
+                  </Text>
+
+                  <TouchableOpacity style={Styles.buyContainer}
+                    onPress={this.valueChange}
+                  >
+                    <Text style={Styles.buttonText}>{'$99 Upgrade to Premium'}</Text>
+                  </TouchableOpacity>
+
+                </View>
+              </View>
+          }
           <View style={Styles.bottomWrapper}>
 
             {
@@ -96,7 +130,7 @@ class Subscription extends Component {
                 </TouchableOpacity>
             }
 
-            {
+            {/* {
               isModalVisible &&
               <Modal isVisible={isModalVisible}>
                 <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
@@ -129,7 +163,7 @@ class Subscription extends Component {
                   </View>
                 </View>
               </Modal>
-            }
+            } */}
 
           </View>
 

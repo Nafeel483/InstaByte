@@ -14,7 +14,8 @@ const styles = StyleSheet.create({
   menuStyle: {
     width: 30,
     height: 30,
-    tintColor: '#0A0A0A'
+    tintColor: '#0A0A0A',
+    marginTop:'10%'
   },
   gratitudeText: {
     fontSize: 30,

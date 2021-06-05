@@ -107,9 +107,9 @@ class DrawerContent extends Component {
 
               <View style={{ flexDirection: 'row', }}>
                 <Image source={Images.Avatar} style={{
-                  width: 80,
-                  height: 80,
-                  borderRadius: 80,
+                  width: 100,
+                  height: 100,
+                  borderRadius: 100,
                 }} />
 
                 <View style={{ marginLeft: 15 }}>
@@ -117,15 +117,17 @@ class DrawerContent extends Component {
                     fontSize: 20, fontWeight: "700", color: Colors.ok,
                     textAlign: 'center',
                     marginTop: 10,
+                      marginLeft: 5,
                   }}>
                     {'User Name'}
                   </Text>
                   <TouchableOpacity
                     onPress={() => { this.props.navigation.navigate('ViewProfile') }}>
                     <Text style={{
-                      fontSize: 17, fontWeight: "500", color: Colors.appHeaderColor,
+                      fontSize: 14, fontWeight: "500", color: Colors.appHeaderColor,
                       textAlign: 'center',
-                      marginLeft: 10,
+                      marginLeft: -13,
+                      marginTop:5
                     }}>
                       {'View Profile'}
                     </Text>

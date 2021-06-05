@@ -41,7 +41,7 @@ class Login extends Component {
   }
   setTime = () => {
     setTimeout(() => {
-      this.props.navigation.navigate('LearningCategories')
+      this.props.navigation.navigate('HomeScreen')
     }, 500);
   }
   render() {
