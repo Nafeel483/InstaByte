@@ -15,6 +15,7 @@ import Colors from '../../Styles/Colors';
 import * as Constants from '../../AllConstants';
 import BackHeader from '../../Components/BackHeader';
 import { LinearGradient } from 'expo-linear-gradient';
+import TitleCategory from './TitleCategory';
 import NotificationList from '../../Components/NotificationList';
 
 class Favourites extends Component {
@@ -25,22 +26,23 @@ class Favourites extends Component {
       showgradient: false,
       freeData: [
         {
-          name: 'Title of Sub Category',
+          name: 'Title of Category',
           image: Images.Mask,
         },
         {
-          name: 'Title of Sub Category',
+          name: 'Title of Category',
           image: Images.Mask_1,
         },
         {
-          name: 'Title of Sub Category',
+          name: 'Title of Category',
           image: Images.Mask,
         },
         {
-          name: 'Title of Sub Category',
+          name: 'Title of Category',
           image: Images.Mask_1,
         },
-      ]
+      ],
+      subToogle: false
     };
   }
   onchangeToogle = () => {
@@ -55,11 +57,12 @@ class Favourites extends Component {
       this.props.navigation.navigate('LearningCategories')
     }, 500);
   }
-  handleIndexChange = (index) => {
-    this.setState({ selectedIndex: index })
-  };
+  showSubToogle = () => {
+    this.setState({ subToogle: !this.state.subToogle })
+
+  }
   render() {
-    const { toogleNotification, showgradient, freeData, selectedIndex
+    const { toogleNotification, showgradient, freeData, subToogle
     } = this.state
     return (
       <>
@@ -78,46 +81,52 @@ class Favourites extends Component {
                 >
                   <Image source={Images.favouriteMAin} style={{ width: 80, height: 80, alignSelf: 'center' }} />
                 </TouchableOpacity>
-                <Text style={Styles.gratitudeText}>{'No Favourites yet!'}</Text>
+                <TouchableOpacity onPress={this.showSubToogle}>
+                  <Text style={Styles.gratitudeText}>{'No Favourites yet!'}</Text>
+                </TouchableOpacity>
                 <Text style={Styles.description}>{'Add your learnings to favourite and watch it anytime'}</Text>
 
               </View>
               :
-              <ScrollView>
-                <View style={Styles.headerContainer}>
-                  {
-                    freeData.length > 0 && freeData.map((value, index) => {
-                      return (
-                        <>
-                          <TouchableOpacity onPress={() => { this.props.navigation.navigate('VideoScreen') }}>
-                            <View style={Styles.listWrapper}>
-                              <View style={Styles.innerList}>
-                                <ImageBackground
-                                  source={value.image}
-                                  imageStyle={{ borderRadius: 15 }}
-                                  style={Styles.headerContentInner}>
-                                  <TouchableOpacity >
-                                    <Image source={Images.playIcon} style={Styles.playIconStyle} />
-                                  </TouchableOpacity>
-                                </ImageBackground>
-                                <Text style={Styles.titleText}>
-                                  {value.name}
-                                </Text>
+              subToogle ?
+                <TitleCategory />
+                :
+                <ScrollView>
+                  <View style={Styles.headerContainer}>
+                    {
+                      freeData.length > 0 && freeData.map((value, index) => {
+                        return (
+                          <>
+                            <TouchableOpacity onPress={this.showSubToogle}>
+                              <View style={Styles.listWrapper}>
+                                <View style={Styles.innerList}>
+                                  <ImageBackground
+                                    source={value.image}
+                                    imageStyle={{ borderRadius: 15 }}
+                                    style={Styles.headerContentInner}>
+                                    <TouchableOpacity onPress={() => { this.props.navigation.navigate('VideoScreen') }}>
+                                      <Image source={Images.playIcon} style={Styles.playIconStyle} />
+                                    </TouchableOpacity>
+                                  </ImageBackground>
+                                  <Text style={Styles.titleText}>
+                                    {value.name}
+                                  </Text>
+                                </View>
+                                <TouchableOpacity >
+                                  <Image source={Images.closeIcon} style={{
+                                    width: 23, height: 20, marginTop: 15, marginRight: 15,
+                                  }} />
+                                </TouchableOpacity>
                               </View>
-                              <TouchableOpacity onPress={() => { this.handleIndexChange(index) }}>
-                                <Image source={Images.closeIcon} style={{
-                                  width: 23, height: 20, marginTop: 15, marginRight: 15,
-                                }} />
-                              </TouchableOpacity>
-                            </View>
-                          </TouchableOpacity>
-                        </>
-                      )
-                    })
-                  }
-                </View>
-              </ScrollView>
+                            </TouchableOpacity>
+                          </>
+                        )
+                      })
+                    }
+                  </View>
+                </ScrollView>
           }
+
           {
             showgradient ?
               <TouchableOpacity
