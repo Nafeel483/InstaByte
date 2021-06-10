@@ -16,8 +16,8 @@ const routeConfigs = {
 };
 
 const navigatorConfig = {
-    // drawerWidth: Metrics.screenWidth * 0.8,
-    drawerWidth: Metrics.screenWidth,
+    drawerWidth: Metrics.screenWidth * 0.8,
+    // drawerWidth: Metrics.screenWidth,
 
     initialRouteName: 'main',
     contentComponent: ({ navigation }) => <DrawerContent navigation={navigation} />,

@@ -26,7 +26,7 @@ class GetStarted extends Component {
   setTime = () => {
     setTimeout(() => {
       this.props.navigation.navigate('Signup')
-    }, 500);
+    }, 50);
   }
   render() {
     const { showgradient } = this.state

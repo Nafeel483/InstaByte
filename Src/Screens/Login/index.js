@@ -42,7 +42,7 @@ class Login extends Component {
   setTime = () => {
     setTimeout(() => {
       this.props.navigation.navigate('HomeScreen')
-    }, 500);
+    }, 50);
   }
   render() {
     const { email, password, showgradient, emailFocus, passwordfocus } = this.state

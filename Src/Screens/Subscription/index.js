@@ -34,7 +34,7 @@ class Subscription extends Component {
   setTime = () => {
     setTimeout(() => {
       this.props.navigation.navigate('LearningCategories')
-    }, 500);
+    }, 50);
   }
   valueChange = () => {
     this.setState({ isModalVisible: !this.state.isModalVisible })

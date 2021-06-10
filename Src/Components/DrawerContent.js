@@ -153,7 +153,7 @@ class DrawerContent extends Component {
             </View>
           }
         </View>
-        <View style={{ flex: 0.1, flexDirection: "row", width: '85%', alignSelf: 'center' }}>
+        {/* <View style={{ flex: 0.1, flexDirection: "row", width: '85%', alignSelf: 'center' }}>
 
           <TouchableOpacity
             onPress={() => { this.props.navigation.closeDrawer() }}
@@ -165,7 +165,7 @@ class DrawerContent extends Component {
             }} />
           </TouchableOpacity>
           <Text style={[{ marginLeft: 15, fontSize: 17, color: Colors.appHeaderColor, marginTop: 2, fontWeight: '500' }]}>{'Back'}</Text>
-        </View>
+        </View> */}
       </SafeAreaView>
     );
   }

@@ -28,7 +28,7 @@ class ViewProfile extends Component {
   setTime = () => {
     setTimeout(() => {
       this.props.navigation.navigate('Login')
-    }, 500);
+    }, 50);
   }
 
   render() {

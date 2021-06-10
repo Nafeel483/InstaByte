@@ -1148,6 +1148,11 @@
   dependencies:
     "@types/hammerjs" "^2.0.36"
 
+"@expo-google-fonts/dm-sans@^0.1.0":
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/@expo-google-fonts/dm-sans/-/dm-sans-0.1.0.tgz#51d73331d9e2383e203193d5c09e3399f802e3ba"
+  integrity sha512-zKZeh7Mihld4Mm21eiOs3pgXE3dpiEL57Q7lJXAtok1wLtkbA3SFfr9IhwYL5CXFxje40ikkpKBLEnvGyJ191Q==
+
 "@expo/config-plugins@1.0.32", "@expo/config-plugins@^1.0.18":
   version "1.0.32"
   resolved "https://registry.yarnpkg.com/@expo/config-plugins/-/config-plugins-1.0.32.tgz#abf4ab24a1cfd53e824fefdf15f727687491a856"

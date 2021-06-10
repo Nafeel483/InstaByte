@@ -49,5 +49,8 @@ const images = {
   messageEdit: require('../../assets/Icons/Settings/messageEdit.png'),
   phone_call: require('../../assets/Icons/Settings/phone_call.png'),
 
+  empty: require('../../assets/Icons/paymentIcons/empty.png'),
+  fillCheck: require('../../assets/Icons/paymentIcons/fillCheck.png'),
+
 };
 export default images;

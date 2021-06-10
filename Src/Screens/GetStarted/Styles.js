@@ -24,7 +24,7 @@ const styles = StyleSheet.create({
     fontWeight: '700',
     textAlign: 'center',
     width: widthScreen / 1.2,
-    alignSelf: 'center'
+    alignSelf: 'center',
   },
   buttonContainer: {
     width: widthScreen / 1.2,
@@ -40,7 +40,7 @@ const styles = StyleSheet.create({
   buttonText: {
     color: Colors.White,
     fontSize: 20,
-    fontWeight: '600'
+    fontWeight: '600',
   },
   buttonContainerGradient: {
     width: widthScreen / 1.2,

@@ -21,7 +21,7 @@ class SelectPayment extends Component {
     super(props);
     this.state = {
       showgradient: false,
-      creditToogle: false,
+      creditToogle: 0,
       paypalToogle: false,
       netToogle: false,
       upiToogle: false
@@ -34,7 +34,16 @@ class SelectPayment extends Component {
   setTime = () => {
     setTimeout(() => {
       this.props.navigation.navigate('PaymentForm')
-    }, 500);
+    }, 50);
+  }
+
+  clickButton = (value) => {
+    if (this.state.creditToogle == value) {
+      this.setState({ creditToogle: 0 })
+    }
+    else {
+      this.setState({ creditToogle: value })
+    }
   }
   render() {
     const { showgradient, creditToogle, paypalToogle, netToogle, upiToogle } = this.state
@@ -62,12 +71,15 @@ class SelectPayment extends Component {
                     }} />
                     <Text style={Styles.headingdescription}>{'Debit Card / Credit Card'}</Text>
                   </View>
-                  <CheckBox
+                  <TouchableOpacity onPress={() => this.clickButton(1)}>
+                    <Image source={creditToogle == 1 ? Images.fillCheck : Images.empty} style={{ width: 20, height: 20, marginTop: 16 }} />
+                  </TouchableOpacity>
+                  {/* <CheckBox
                     checkedColor={Colors.appHeaderColor}
                     uncheckedColor={Colors.ok}
                     checked={creditToogle}
                     onPress={() => this.setState({ creditToogle: !this.state.creditToogle })}
-                  />
+                  /> */}
 
                 </View>
               </View>
@@ -82,12 +94,15 @@ class SelectPayment extends Component {
                     }} />
                     <Text style={Styles.headingdescription}>{'Paypal'}</Text>
                   </View>
-                  <CheckBox
+                  <TouchableOpacity onPress={() => this.clickButton(2)}>
+                    <Image source={creditToogle == 2 ? Images.fillCheck : Images.empty} style={{width: 20, height: 20, marginTop: 16 }} />
+                  </TouchableOpacity>
+                  {/* <CheckBox
                     checkedColor={Colors.appHeaderColor}
                     uncheckedColor={Colors.ok}
                     checked={paypalToogle}
                     onPress={() => this.setState({ paypalToogle: !this.state.paypalToogle })}
-                  />
+                  /> */}
 
                 </View>
               </View>
@@ -102,12 +117,15 @@ class SelectPayment extends Component {
                     }} />
                     <Text style={Styles.headingdescription}>{'Net Banking'}</Text>
                   </View>
-                  <CheckBox
+                  <TouchableOpacity onPress={() => this.clickButton(3)}>
+                    <Image source={creditToogle == 3 ? Images.fillCheck : Images.empty} style={{ width: 20, height: 20, marginTop: 16 }} />
+                  </TouchableOpacity>
+                  {/* <CheckBox
                     checkedColor={Colors.appHeaderColor}
                     uncheckedColor={Colors.ok}
                     checked={netToogle}
                     onPress={() => this.setState({ netToogle: !this.state.netToogle })}
-                  />
+                  /> */}
 
                 </View>
               </View>
@@ -122,12 +140,15 @@ class SelectPayment extends Component {
                     }} />
                     <Text style={Styles.headingdescription}>{'UPI'}</Text>
                   </View>
-                  <CheckBox
+                  <TouchableOpacity onPress={() => this.clickButton(4)}>
+                    <Image source={creditToogle == 4 ? Images.fillCheck : Images.empty} style={{ width: 20, height: 20, marginTop: 16 }} />
+                  </TouchableOpacity>
+                  {/* <CheckBox
                     checkedColor={Colors.appHeaderColor}
                     uncheckedColor={Colors.ok}
                     checked={upiToogle}
                     onPress={() => this.setState({ upiToogle: !this.state.upiToogle })}
-                  />
+                  /> */}
 
                 </View>
               </View>
@@ -142,7 +163,7 @@ class SelectPayment extends Component {
             {
               showgradient ?
                 <TouchableOpacity
-                  // onPress={() => { this.props.navigation.navigate("PaymentForm") }}
+                // onPress={() => { this.props.navigation.navigate("PaymentForm") }}
                 >
                   <LinearGradient
                     colors={['#775F53', '#F9C802']}

@@ -36,7 +36,7 @@ class PaymentForm extends Component {
   setTime = () => {
     setTimeout(() => {
       this.props.navigation.navigate('Gratitude')
-    }, 500);
+    }, 50);
   }
   render() {
     const { showgradient, cardNumber, cardName, cardExpiry, cardCSV } = this.state

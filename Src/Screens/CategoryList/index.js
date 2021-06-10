@@ -23,34 +23,42 @@ class CategoryList extends Component {
       selectedIndex: null,
       freeData: [
         {
+          id: false,
           name: 'Title of Sub Category',
           image: Images.Mask,
         },
         {
+          id: false,
           name: 'Title of Sub Category',
           image: Images.Mask_1,
         },
         {
+          id: false,
           name: 'Title of Sub Category',
           image: Images.Mask,
         },
         {
+          id: false,
           name: 'Title of Sub Category',
           image: Images.Mask_1,
         },
         {
+          id: false,
           name: 'Title of Sub Category',
           image: Images.Mask_1,
         },
         {
+          id: false,
           name: 'Title of Sub Category',
           image: Images.Mask,
         },
         {
+          id: false,
           name: 'Title of Sub Category',
           image: Images.Mask,
         },
         {
+          id: false,
           name: 'Title of Sub Category',
           image: Images.Mask_1,
         },
@@ -58,10 +66,13 @@ class CategoryList extends Component {
     };
   }
   handleIndexChange = (index) => {
-    this.setState({ selectedIndex: index })
+    let allData = this.state.freeData
+
+    allData[index].id = true
+    this.setState({ freeData: allData })
   };
   render() {
-    const { freeData, selectedIndex } = this.state
+    const { freeData } = this.state
     return (
       <>
         <View style={Styles.safeViewStyle}>
@@ -93,7 +104,7 @@ class CategoryList extends Component {
                           <TouchableOpacity onPress={() => { this.handleIndexChange(index) }}>
                             <Image source={Images.heart} style={{
                               width: 23, height: 20, marginTop: 15, marginRight: 15,
-                              tintColor: selectedIndex == index ? '#F33636' : '#BDBDBD'
+                              tintColor: value.id == true ? '#F33636' : '#BDBDBD'
                             }} />
                           </TouchableOpacity>
                         </View>

@@ -40,7 +40,7 @@ class Settings extends Component {
   setTime = () => {
     setTimeout(() => {
       this.props.navigation.navigate('LearningCategories')
-    }, 500);
+    }, 50);
   }
   focusPassword = () => {
     this.setState({

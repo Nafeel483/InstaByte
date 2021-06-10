@@ -61,7 +61,7 @@ class Signup extends Component {
   setTime = () => {
     setTimeout(() => {
       this.props.navigation.navigate('Login')
-    }, 500);
+    }, 50);
   }
   render() {
     const { name, email, password, value,

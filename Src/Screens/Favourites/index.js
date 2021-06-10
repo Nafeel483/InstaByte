@@ -55,7 +55,7 @@ class Favourites extends Component {
   setTime = () => {
     setTimeout(() => {
       this.props.navigation.navigate('LearningCategories')
-    }, 500);
+    }, 50);
   }
   showSubToogle = () => {
     this.setState({ subToogle: !this.state.subToogle })

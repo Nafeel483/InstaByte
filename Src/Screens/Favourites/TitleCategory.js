@@ -53,7 +53,7 @@ class TitleCategory extends Component {
   setTime = () => {
     setTimeout(() => {
       this.props.navigation.navigate('LearningCategories')
-    }, 500);
+    }, 50);
   }
   handleIndexChange = (index) => {
     this.setState({ selectedIndex: index })
